@@ -43,16 +43,14 @@
 
 # zadanie 3
 
-q1 = "Podaj imie i nazwisko "
-q2 = "Jaki jest najczęstszy sposób spędzania wolnego czasu dla Ciebie: "
-q3 = "W jakich okolicznościach czytasz książki najczęściej? "
-q4 = "Jeżeli spędzasz czas wolny czytając książki, jaki jest główny powód takiego wyboru? "
-q5 = "Po książki w jakiej formie sięgasz najczęściej? "
-q6 = "Ile książek czytasz średnio w ciągu roku? "
-q7 = "Jak często średnio czytasz książki? "
-q8 = "Po jakie gatunki książek sięgasz najczęściej? "
-
-Questions = [q1,q2,q3,q4,q5,q6,q7,q8]
+Questions = {"Podaj imie i nazwisko ": [],
+            "Jaki jest najczęstszy sposób spędzania wolnego czasu dla Ciebie: ": [],
+            "W jakich okolicznościach czytasz książki najczęściej? ": [],
+            "Jeżeli spędzasz czas wolny czytając książki, jaki jest główny powód takiego wyboru? ": [],
+            "Po książki w jakiej formie sięgasz najczęściej? ": [],
+            "Ile książek czytasz średnio w ciągu roku? ": [],
+            "Jak często średnio czytasz książki? ": [],
+            "Po jakie gatunki książek sięgasz najczęściej? ": []}
 
 for x in Questions:
     print("pytanie: " + x, end="")
