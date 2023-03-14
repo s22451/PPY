@@ -44,17 +44,47 @@
 # zadanie 3
 
 Questions = {"Podaj imie i nazwisko ": [],
-            "Jaki jest najczęstszy sposób spędzania wolnego czasu dla Ciebie: ": [],
-            "W jakich okolicznościach czytasz książki najczęściej? ": [],
-            "Jeżeli spędzasz czas wolny czytając książki, jaki jest główny powód takiego wyboru? ": [],
-            "Po książki w jakiej formie sięgasz najczęściej? ": [],
-            "Ile książek czytasz średnio w ciągu roku? ": [],
-            "Jak często średnio czytasz książki? ": [],
-            "Po jakie gatunki książek sięgasz najczęściej? ": []}
+            "Jaki jest najczęstszy sposób spędzania wolnego czasu dla Ciebie: ": ["oglądanie telewizji/filmów/seriali","czytanie książek/czasopism","uprawianie sportu"],
+            "W jakich okolicznościach czytasz książki najczęściej? ": ["podczas podróży","w czasie wolnym (po pracy, na urlopie)","w ogóle nie czytam"],
+            "Jeżeli spędzasz czas wolny czytając książki, jaki jest główny powód takiego wyboru? ": ["chęć poszerzenia wiedzy","czytanie to moje hobby","konieczność nauki w związku z wykonywaną pracą/studiami"],
+            "Po książki w jakiej formie sięgasz najczęściej? ": ["papierowej (tradycyjnej)","e-booki na tablecie/telefonie","e-booki na specjalnym czytniku (np. Kindle)"],
+            "Ile książek czytasz średnio w ciągu roku? ": ["żadnej w całości - jedynie fragmenty","2 lub 3","4-10"],
+            "Jak często średnio czytasz książki? ": ["codziennie","raz w miesiącu","raz na rok"],
+            "Po jakie gatunki książek sięgasz najczęściej? ": ["kryminały/thrillery","naukowe","fantastykę"]}
 
-for x in Questions:
-    print("pytanie: " + x, end="")
-    ans = input()
-    print("odpowiedź: " + ans)
+
+ind = 1
+for k, v in Questions.items():
+    print(ind, "pytanie: ", k)
+    tmpind = 1
+    for values in Questions.get(k):
+        print('\t', tmpind, values)
+        tmpind = tmpind + 1
+    if ind == 1:
+      print("odpowiedź: ", input())
+    elif 1 < ind < 8:
+        inp = list(map(int,input().split()))
+        print("odpowiedź: ")
+        for ans in inp:
+            tmp = 1
+            for values in Questions.get(k):
+                if ans == tmp:
+                    print('\t', tmp, values)
+                tmp = tmp + 1
+    elif ind == 8:
+        ans = input()
+        while len(ans) != 1:
+            print("Wybierz jedną odpowiedź!")
+            ans = input()
+        tmp = 1
+        print("odpowiedź: ")
+        for values in Questions.get(k):
+            if int(ans) == tmp:
+                print('\t', tmp, values)
+            tmp = tmp + 1
+    ind = ind + 1
+
+print("dziękujemy za wypełnienie ankiety")
+
 
 
