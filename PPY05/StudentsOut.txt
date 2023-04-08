@@ -1,0 +1,28 @@
+0:
+	email: test@gmail.com
+	imie: kamil
+	nazwisko: kaminski
+	punkty: 70
+	ocena: 3.5
+	status: MAILED
+1:
+	email: test2@gmail.com
+	imie: lukasz
+	nazwisko: kwasniewicz
+	punkty: 100
+	ocena: 5
+	status: MAILED
+2:
+	email: test@gmail.com
+	imie: kamil
+	nazwisko: kaminski
+	punkty: 70
+	ocena: 3.5
+	status: 
+3:
+	email: test2@gmail.com
+	imie: lukasz
+	nazwisko: kwasniewicz
+	punkty: 100
+	ocena: 5
+	status: 
