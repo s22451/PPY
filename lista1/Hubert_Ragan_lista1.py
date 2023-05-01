@@ -154,8 +154,19 @@ print(fibonacci(n_9))
 
 
 def binary_search(lista, e):
+    left, right = 0, len(lista) - 1
 
+    while left <= right:
+        mid = (left + right) // 2
 
+        if lista[mid] == e:
+            return mid
+        elif lista[mid] < e:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return None
 
 l_10 = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
-print(binary_search(l_10, 2))
+print(binary_search(l_10, 32))
